@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Projects – FastTech</title>
+
+    <style>
+        /* Projects Gallery Hover */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg,
+                    rgba(220, 38, 38, 0.85),
+                    rgba(239, 68, 68, 0.75));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .project-overlay p {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Filter Buttons */
+        .filter-btns button {
+            margin: 0 5px 10px 0;
+        }
+
+        /* Added stats counter box styling */
+        .counter-box {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(135deg,
+                    rgba(220, 38, 38, 0.05),
+                    rgba(239, 68, 68, 0.05));
+            border-radius: 15px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .counter-box:hover {
+            background: linear-gradient(135deg,
+                    rgba(220, 38, 38, 0.1),
+                    rgba(239, 68, 68, 0.1));
+            transform: translateY(-5px);
+        }
+
+        .counter-box h3 {
+            color: #dc2626;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .counter-box p {
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Added category feature box styling */
+        .category-box {
+            padding: 30px;
+            background: rgba(105, 9, 9, 0.219);
+            border-radius: 15px;
+            border-left: 4px solid #dc2626;
+            transition: all 0.3s ease;
+        }
+
+        .category-box:hover {
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .category-box i {
+            font-size: 2.5rem;
+            color: #dc2626;
+            margin-bottom: 15px;
+        }
+
+        .category-box h5 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .category-box p {
+            color: #666;
+            font-size: 0.95rem;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo-white.svg" class="img-fluid about-img" alt="" style="height: 45px" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold active" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section id="projects-hero" class="d-flex align-items-center text-center text-white bg-black"
+        style="height: 50vh; background: black">
+        <div class="container">
+            <h1 class="fw-bold display-3 animate1">Our Projects</h1>
+            <p class="lead mt-3 animate2">
+                Innovation delivered through technology and design
+            </p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-black">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-box">
+                        <h3>150+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-box">
+                        <h3>100+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-box">
+                        <h3>8+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-box">
+                        <h3>25</h3>
+                        <p>Award Winning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="section-padding bg-black">
+        <div class="container text-center">
+            <h2 class="display-4 fw-bolder mb-4">Explore Our Work</h2>
+            <div class="line mx-auto mb-4"></div>
+            <div class="filter-btns mb-4">
+                <button class="btn btn-brand filter-btn" style="color: white;" data-filter="all">
+                    All
+                </button>
+                <button class="btn btn-outline-brand filter-btn" style="color: white;" data-filter="web">
+                    Web Development
+                </button>
+                <button class="btn btn-outline-brand filter-btn" style="color: white;" data-filter="app">
+                    App Development
+                </button>
+                <button class="btn btn-outline-brand filter-btn" style="color: white;" data-filter="design">
+                    UI/UX Design
+                </button>
+            </div>
+
+            <!-- Projects Gallery -->
+            <div class="row g-4" id="projects-gallery">
+
+                <!-- Project 1 (Web Development) -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="web">
+                    <div class="project-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1669173034860-eca2e1ee62b2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Project 1" />
+                        <div class="project-overlay">
+                            <h5>Corporate Website</h5>
+                            <p>Responsive website designed for a corporate client.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 (App Development) -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="app">
+                    <div class="project-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3" alt="Project 2" />
+                        <div class="project-overlay">
+                            <h5>Mobile App</h5>
+                            <p>User-friendly mobile app for Android & iOS platforms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (UI/UX Design) -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="design">
+                    <div class="project-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1612296727716-d6c69d2a2cbb?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Project 3" />
+                        <div class="project-overlay">
+                            <h5>UI/UX Design</h5>
+                            <p>Creative and modern UI/UX design for a SaaS platform.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Web Development) -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="web">
+                    <div class="project-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="Project 4" />
+                        <div class="project-overlay">
+                            <h5>E-Commerce Website</h5>
+                            <p>High-performing online store with smooth UX.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (App Development) -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="app">
+                    <div class="project-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="Project 5" />
+                        <div class="project-overlay">
+                            <h5>Fitness App</h5>
+                            <p>Mobile app focused on health and fitness tracking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 (UI/UX Design) -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="design">
+                    <div class="project-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Project 6" />
+                        <div class="project-overlay">
+                            <h5>Landing Page Design</h5>
+                            <p>Landing page crafted to convert visitors into customers.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Project categories section -->
+    <section class="section-padding bg-black">
+        <div class="container">
+            <h2 class="display-4 fw-bolder text-center mb-5">Our Expertise</h2>
+            <div class="line mx-auto mb-5"></div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-box">
+                        <i class="ri-global-line"></i>
+                        <h5>Web Development</h5>
+                        <p>
+                            We create responsive, high-performance websites that engage
+                            users and drive conversions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-box">
+                        <i class="ri-smartphone-line"></i>
+                        <h5>App Development</h5>
+                        <p>
+                            Native and cross-platform applications designed for seamless
+                            user experiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-box">
+                        <i class="ri-palette-line"></i>
+                        <h5>UI/UX Design</h5>
+                        <p>
+                            Beautiful, intuitive designs that blend aesthetics with
+                            functionality and user needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA section -->
+    <section class="section-padding text-center text-white bg-black ">
+        <div class="container">
+            <h2 class="display-4 fw-bolder mb-3">Ready to Start Your Project?</h2>
+            <p class="lead mb-4">
+                Let's work together to bring your ideas to life with cutting-edge
+                technology and design.
+            </p>
+            <a href="index.html#contactus" class="btn btn-light btn-lg fw-bold">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="assets/images/logo-white.svg" style="height: 55px" class="mb-3" alt="" />
+                    <p class="text-white-50">
+                        FastTech delivers innovative digital solutions with passion and
+                        precision.
+                    </p>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Contact Info</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li><i class="ri-map-pin-line me-2"></i> Karachi, Pakistan</li>
+                        <li><i class="ri-mail-line me-2"></i> info@fasttech.com</li>
+                        <li><i class="ri-phone-line me-2"></i> +92 335 2307788</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Join Newsletter</h5>
+                    <p class="text-white-50">
+                        Subscribe to receive updates and new offers.
+                    </p>
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address" />
+                            <button class="btn btn-brand" type="submit">Go</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="text-white-50 mt-4" />
+            <div class="text-center text-white-50">
+                © 2025 FastTech. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Simple Filter
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projects = document.querySelectorAll(".project-item");
+
+        filterButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const filter = btn.getAttribute("data-filter");
+
+                filterButtons.forEach((b) => {
+                    b.classList.remove("btn-brand");
+                    b.classList.add("btn-outline-brand");
+                });
+                btn.classList.remove("btn-outline-brand");
+                btn.classList.add("btn-brand");
+
+                projects.forEach((project) => {
+                    if (filter === "all" || project.dataset.category === filter) {
+                        project.style.display = "block";
+                    } else {
+                        project.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

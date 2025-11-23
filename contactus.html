@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        /* Accordion Container */
+        .accordion-item {
+            background-color: #0d0d0d !important;
+            border: 1px solid #ff1a1a !important;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Accordion Header */
+        .accordion-button {
+            background-color: #131313 !important;
+            color: #ffffff !important;
+            font-weight: 300;
+            border: none;
+            box-shadow: none;
+            transition: 0.3s ease;
+        }
+
+
+
+
+        /* Accordion Body */
+        .accordion-body {
+            background-color: #0f0f0f;
+            color: #dcdcdc;
+            border-top: 1px solid #ff1a1a;
+        }
+    </style>
+
+    <title>Contact Us – FastTech</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top navbar-animated">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo-white.svg" class="img-fluid about-img" alt="" style="height: 45px" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-contact" class="d-flex align-items-center text-center text-white hero-section bg-black"
+        style="height: 60vh; background-color: black">
+        <div class="container">
+            <h1 class="fw-bold display-3 hero-title animate1">Get In Touch</h1>
+            <h5 class="mb-4 hero-subtitle animate2">
+                We're here to help and answer any question you might have
+            </h5>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="section-padding bg-black">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bolder">Ways To Connect</h2>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Email Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="quick-card h-100">
+                        <div class="quick-icon">
+                            <i class="ri-mail-send-line"></i>
+                        </div>
+                        <div class="quick-text w-100">
+                            <h5>Email Us</h5>
+                            <p>
+                                Drop us an email and we'll get back to you within 24 hours
+                            </p>
+                            <a href="mailto:info@fasttech.com">info@fasttech.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="quick-card h-100">
+                        <div class="quick-icon">
+                            <i class="ri-whatsapp-line"></i>
+                        </div>
+                        <div class="quick-text w-100">
+                            <h5>WhatsApp Us</h5>
+                            <p>Get instant responses for urgent inquiries</p>
+                            <a href="https://wa.me/923001234567" target="_blank">Chat on WhatsApp →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="quick-card h-100">
+                        <div class="quick-icon">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <div class="quick-text w-100">
+                            <h5>Call Us</h5>
+                            <p>Speak directly with our team during business hours</p>
+                            <a href="tel:+923352307788">+92 335 2307788</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="quick-card h-100">
+                        <div class="quick-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <div class="quick-text w-100">
+                            <h5>Visit Us</h5>
+                            <p>Find us at our office in Karachi, Pakistan</p>
+                            <a href="https://maps.google.com" target="_blank">View Location →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hours Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="quick-card h-100">
+                        <div class="quick-icon">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        <div class="quick-text w-100">
+                            <h5>Business Hours</h5>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <a href="#">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="quick-card h-100">
+                        <div class="quick-icon">
+                            <i class="ri-chat-3-line"></i>
+                        </div>
+                        <div class="quick-text w-100">
+                            <h5>Live Support</h5>
+                            <p>Chat with our support team for immediate assistance</p>
+                            <a href="#">Start Chat →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section-padding bg-black">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bolder">Send Us A Message</h2>
+                <div class="line mx-auto"></div>
+                <p class="text-muted">
+                    Have a question or project in mind? We'd love to hear from you.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-box">
+                        <form id="contactForm" action="/send-message" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold mb-2">Full Name *</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter your name"
+                                        required />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold mb-2">Email Address *</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Enter your email"
+                                        required />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold mb-2">Phone Number</label>
+                                    <input type="tel" class="form-control" name="phone"
+                                        placeholder="Enter your phone number" />
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold mb-2">Subject *</label>
+                                    <input type="text" class="form-control" name="subject"
+                                        placeholder="What is this about?" required />
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-bold mb-2">Service Interest</label>
+                                    <select class="form-control" name="service">
+                                        <option value="">Select a service</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="app">App Development</option>
+                                        <option value="design">UI/UX Design</option>
+                                        <option value="strategy">Digital Strategy</option>
+                                        <option value="cloud">Cloud Solutions</option>
+                                        <option value="ai">AI & Automation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-bold mb-2">Message *</label>
+                                    <textarea class="form-control" rows="6" name="message"
+                                        placeholder="Tell us about your project or inquiry..." required></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="privacy" required />
+                                        <label class="form-check-label" for="privacy">
+                                            I agree to the privacy policy and terms of service
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-brand px-5 py-3 mt-2">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-black">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bolder">Frequently Asked Questions</h2>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Project timelines vary based on complexity and scope. Most
+                                    web development projects take 4-12 weeks, while app
+                                    development typically ranges from 3-6 months. We'll provide
+                                    you with a detailed timeline during the initial
+                                    consultation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What is your pricing model?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer flexible pricing options including fixed-price
+                                    projects, hourly rates, and retainer agreements. The best
+                                    option depends on your specific needs. Contact us for a
+                                    custom quote.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you provide ongoing support after launch?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We provide comprehensive post-launch support including
+                                    maintenance, updates, bug fixes, and technical support. We
+                                    offer various support packages tailored to your needs.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can you work with existing projects?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We have extensive experience in taking over, improving, and
+                                    maintaining existing projects. Whether it's a codebase
+                                    migration, feature addition, or optimization, we can help.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item border rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do we communicate during the project?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We maintain regular communication through email, WhatsApp,
+                                    and video calls. You'll have a dedicated project manager
+                                    who'll keep you updated on progress and address any
+                                    concerns.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-black">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Start Your Project?</h2>
+                    <p class="text-muted lead">
+                        Let's discuss your ideas and turn them into reality. Our team is
+                        excited to work with you!
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#contactForm" class="btn btn-brand btn-lg px-5 py-3">Schedule a Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Logo & About -->
+                <div class="col-lg-4 col-md-6">
+                    <img src="assets/images/logo-white.svg" style="height: 55px" class="mb-3" alt="" />
+                    <p class="text-white-50">
+                        FastTech delivers innovative digital solutions with passion and
+                        precision. Transforming ideas into powerful products.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Contact Info</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li><i class="ri-map-pin-line me-2"></i> Karachi, Pakistan</li>
+                        <li><i class="ri-mail-line me-2"></i> info@fasttech.com</li>
+                        <li><i class="ri-phone-line me-2"></i> +92 335 2307788</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Join Newsletter</h5>
+                    <p class="text-white-50">
+                        Subscribe to receive updates and new offers.
+                    </p>
+
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address" />
+                            <button class="btn btn-brand" type="submit">Go</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="text-white-50 mt-4" />
+
+            <div class="text-center text-white-50">
+                © 2025 FastTech. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
