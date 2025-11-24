@@ -50,7 +50,7 @@ gsap.from(".navbar-brand img", {
   ease: "power2.out"
 });
 
-gsap.from(".navbar-nav .nav-item", {
+gsap.from(".navbar-nav .nav-item,.navbar-toggler-icon", {
   opacity: 0,
   y: -30,
   duration: 1,
