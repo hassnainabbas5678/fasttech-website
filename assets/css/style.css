@@ -652,3 +652,8 @@ img {
     font-size: 1.8rem;
   }
 }
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
