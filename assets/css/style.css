@@ -129,7 +129,7 @@ img {
 #hero {
   height: 100vh;
   background: linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.8)),
-    url(assets/images/hero-section-5.jpg) center / cover no-repeat;
+    url(../images/hero-section-5.jpg) center / cover no-repeat;
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -144,7 +144,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/images/hero-section-5.jpg")
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hero-section-5.jpg")
     no-repeat center center;
   background-size: cover;
   pointer-events: none;
